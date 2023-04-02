@@ -18,7 +18,7 @@ def query_meta(id: str) -> dict:
     proc = subprocess.Popen(
         [
             # request to download json meta with id
-            "yt-dlp", "-j", id 
+            "python3", "-m", "yt_dlp", "-j", id
         ],
         stdin=subprocess.DEVNULL,
         stdout=subprocess.PIPE,

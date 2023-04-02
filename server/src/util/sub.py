@@ -11,7 +11,8 @@ def download_subs(id: str, lang: str, format: str = "vtt"):
         raise ValueError("invalid subtitle lang")
 
     args = [
-        "yt-dlp", id,
+        "python3", "-m", "yt_dlp",
+        id,
         "-o", sub_dest,
         "--no-download",
         "--write-subs",
