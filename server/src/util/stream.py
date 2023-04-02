@@ -32,7 +32,9 @@ async def stream_from_yt(id: str, format: str = "best", sl: str = None):
     print(f"[{id}]: requested with format {format} and subs {sl}, configuring...")
     args = [
         # request to download with video ID
-        "yt-dlp", id, 
+        "python3", "-m", "yt_dlp",
+#        "yt-dlp",
+        id,
         # output to stdout (needed for streaming)
         "-o", "-", 
         # specify output format
